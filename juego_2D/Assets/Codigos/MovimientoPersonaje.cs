@@ -14,7 +14,6 @@ public class MovimientoPersonaje : MonoBehaviour
     private Rigidbody2D cuerpoRigido;
     private Animator animaciones;
 
-
     private bool activar = false;
     private Transform trampPinchos;
     private Vector2 starPosition;
@@ -23,7 +22,7 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         escalaInicio = transform.localScale;
         posicionInicio = transform.position;
-        cuerpoRigido = GetComponent<Rigidbody2D>();
+        cuerpoRigido = GetComponent<Rigidbody2D>();   
         animaciones = GetComponent<Animator>();
     }
 
@@ -75,8 +74,8 @@ public class MovimientoPersonaje : MonoBehaviour
             if (trampPinchos.position.y < -82)
             {
                 activar = false;
-            }
-        }
+    }
+    }
     }
 
     void OnCollisionStay2D (Collision2D collision)
@@ -106,6 +105,6 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             activar = true;
         }
-   }
+    }
 }
 
